@@ -37,6 +37,11 @@ class FeedbackController extends Controller
 					$feedEmail = strip_tags(trim($_POST['email']));
 					$feedMessage = strip_tags(trim($_POST['message']));
 					$this->model->NewFeedback($feedName, $feedEmail, $feedMessage);
+					$theme = "Сообщение с сайта WeatherPHP";
+					$letter .= "Имя отправителя: " . $feedName . "\r\n";
+					$letter .= "Email отправителя: " . $feedEmail . "\r\n";
+					$letter .= "Сообщение: " . $feedMessage . "\r\n";
+					mail('artemkakotuh@gmail.com', $theme, $letter);
 					return true;
 				} else {
 					$this->pageData['registerMsg'] = "Вы не прошли капчу";
