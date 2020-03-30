@@ -2,12 +2,21 @@
 
 class AllfeedbackController extends Controller
 {
-	//подключаем файл с версткой
+	//подключаем фал с версткой
 	private $pageTpl =  '/app/views/allfeedback.php';
 
 	public function __construct()
 	{
 		$this->model = new AllfeedbackModel();
 		$this->view = new View();
+	}
+
+	public function index()
+	{
+		$this->view->checkAction();
+		$this->pageData['title'] = 'Allfeedback';
+		$this->pageData['feedbacks'] = $this->model->getAllfeedback();
+		$this->view->gotoPage();
+		$this->view->render($this->pageTpl, $this->pageData);
 	}
 }
