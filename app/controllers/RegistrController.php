@@ -1,5 +1,10 @@
 <?php
 
+namespace app\controllers;
+
+use app\core\Controller;
+use app\models\RegistrModel;
+use app\core\View;
 class RegistrController extends Controller
 {
 	//подключаем файл с версткой

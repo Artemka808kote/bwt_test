@@ -1,10 +1,12 @@
 <?php
 
+namespace app\core;
+
 class View
 {
 	public function render($tpl, $pageData)
 	{
-		include ROOT . $tpl;
+		include $_SERVER['DOCUMENT_ROOT'] . $tpl;
 	}
 	public function redirect($url)
 	{

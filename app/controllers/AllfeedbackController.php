@@ -1,5 +1,10 @@
 <?php
 
+namespace app\controllers;
+
+use app\core\Controller;
+use app\models\AllfeedbackModel;
+use app\core\View;
 class AllfeedbackController extends Controller
 {
 	//подключаем фал с версткой

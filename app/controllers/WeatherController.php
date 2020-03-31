@@ -1,8 +1,12 @@
 <?php
 
-use DiDom\Document;
-use DiDom\Element;
+namespace app\controllers;
 
+use app\core\Controller;
+use app\models\WeatherModel;
+use app\core\View;
+
+use DiDom\Document;
 class WeatherController extends Controller
 {
 	//подключаем файл с версткой

@@ -1,5 +1,10 @@
 <?php
 
+namespace app\models;
+
+use app\core\Model;
+
+use PDO;
 class RegistrModel extends Model
 {
 	public function checkUser($email, $password)

@@ -1,5 +1,8 @@
 <?php
 
+namespace app\config;
+
+use PDO;
 class DB
 {
 	const USER = "artemka";

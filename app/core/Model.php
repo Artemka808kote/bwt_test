@@ -1,5 +1,8 @@
 <?php
 
+namespace app\core;
+
+use app\config\db;
 class Model
 {
 	protected $db = null;

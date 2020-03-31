@@ -1,5 +1,10 @@
 <?php
 
+namespace app\models;
+
+use app\core\Model;
+
+use PDO;
 class FeedbackModel extends Model
 {
 	public function NewFeedback($feedName, $feedEmail, $feedMessage)
