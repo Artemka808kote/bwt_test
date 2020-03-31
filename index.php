@@ -1,6 +1,6 @@
 <?php
+//Подключение DIDom
 require_once __DIR__ . '/public/didom/vendor/autoload.php';
-// require_once("app/config/config.php");
 
 //Указываем что мы будем использовать класс Router
 use app\core\Router;
@@ -12,12 +12,9 @@ spl_autoload_register(function ($class)
 	$path = str_replace('\\', '/', $class . '.php');
 	//Если файл есть то мы его подключаем
 	if (file_exists($path))
-	{
 		require_once $path;
-	}
-		
 });
-
+//Включаем сесии
 session_start();
 
 $router = new Router;
