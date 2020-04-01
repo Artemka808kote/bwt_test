@@ -2,13 +2,12 @@
 
 namespace app\core;
 
-use app\config\db;
 class Model
 {
-	protected $db = null;
+	public $db;
 
 	public function __construct()
 	{
-		$this->db = DB::connToDB();
+		$this->db = DB::getInstance()->getConnection();
 	}
 }
